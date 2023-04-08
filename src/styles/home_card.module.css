@@ -1,6 +1,10 @@
 .card{
     background-color: white;
-    width: 300px;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.658);
     transition: all 400ms ease;
 }

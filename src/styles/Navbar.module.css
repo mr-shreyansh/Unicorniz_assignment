@@ -1,20 +1,29 @@
  .navbar{
     display: flex;
     justify-content: space-around;
-    background-color: blueviolet;
+    background-color: rgb(255, 255, 255);
     min-height: 8vh;
     position: relative;
-    box-shadow: 2px 2px 20px blueviolet;
     z-index: 99999;
+    transition: all 0.5s ease;
+   }
+   
+   .navbar:hover{
+    box-shadow: 2px 2px 20px rgba(62, 62, 62, 0.461);
+
  }
 
  .navbar h1{
     color: #ffffff;
-    text-shadow: 2px 2px 5px #840eeb;
     cursor: pointer;
     align-self: center;
     font-weight: bolder;
     font-size:x-large;
+    transition: all 300ms ease-in-out;
+ }
+
+ .navbar h1:hover{
+   transform: scale(1.01);
  }
 
  .nav_list{
@@ -27,8 +36,8 @@
 
  .nav_list a{
     text-decoration: none;
-    color: #ffffff;
-    text-shadow: 2px 2px 7px #190332;
+    color: #484747;
+    transition: all 400ms ease-in;
     
  }
 

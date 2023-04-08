@@ -9,7 +9,7 @@ import arrow from "../assets/arrow1.png";
 import add from "../assets/add.jpg";
 const FerryPage = () => {
     return (
-        <div className="flex flex-col lg:flex-row lg:p-8 ">
+        <div className="flex flex-col bg-gray-100 lg:flex-row lg:p-8 ">
             <div>
                 <h1 className="mx-5 my-5 font-bold text-[2vw]">Book Your Andaman Ferry</h1>
                 <FormCard classname="shadow-xl p-3" />
