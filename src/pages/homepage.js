@@ -21,7 +21,7 @@ const Homepage = () => {
           The best of Andamans, curated for you.
         </h2>
       </div>
-      <div className={`${styles.card_list} grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-5`}>
+      <div className={`${styles.card_list} grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-5 justify-items-center`}>
         <HomeCard className="m-5" heading={"Plan an incredible trip"} text={"Build the trip-of-a-lifetime with us"} pic={"https://img.freepik.com/premium-vector/route-location-way-icon-travel-route-map-maps-gps-map-localization-icon-stock-vector_799714-72.jpg?w=2000"} />
         <HomeCard className="m-5" heading={"The Best Hotels + Resorts"} text={"Build the trip-of-a-lifetime with us"} pic={hotel} />
         <HomeCard className="m-5" heading={"Explore Things-to-do"} text={"Build the trip-of-a-lifetime with us"} pic={scuba} />
