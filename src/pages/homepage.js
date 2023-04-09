@@ -7,13 +7,32 @@ import Navbar from '@/components/Navbar'
 import beach from '../assets/beach.jpg'
 import Image from 'next/image'
 import InfoCard from '@/components/info_card'
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
 const Homepage = () => {
 
-  const cards = [];
 
-  for (let i = 0; i < 4; i++) {
-    cards.push(<InfoCard i={i} />);
-  }
+
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 935, min: 0 },
+      items: 1
+    }
+  };
+
 
   return (
     <main >
@@ -34,11 +53,19 @@ const Homepage = () => {
         <HomeCard className={`m-5 ${styles.card}`} heading={"Explore Things-to-do"} text={"Build the trip-of-a-lifetime with us"} pic={scuba} />
         <HomeCard className={`m-5 ${styles.card}`} heading={"Ferry Bookings"} text={"Build the trip-of-a-lifetime with us"} pic={boat} />
       </div>
-     <h1 className='text-center py-4 mt-9 text-xl'>Things To Know Before You Go</h1>
-     <div className='grid grid-cols-1 md:grid-cols-2 place-items-center lg:w-[70vw] lg:mx-[15vw] '>
-        {cards}
-     </div>
-
+      <h1 className='text-center py-4 mt-9 text-xl'>Things To Know Before You Go</h1>
+      <div className='grid grid-cols-1 md:grid-cols-2 place-items-center md:w-[80vw] md:mx-[10vw] hidden md:inline-grid'>
+        <div><InfoCard /></div>
+        <div><InfoCard /></div>
+        <div><InfoCard /></div>
+        <div><InfoCard /></div>
+      </div>
+      <Carousel responsive={responsive} className='w-[80vw] mx-[10vw] sm:hidden'>
+        <div className='md:hidden'><InfoCard /></div>
+        <div className='md:hidden'><InfoCard /></div>
+        <div className='md:hidden'><InfoCard /></div>
+        <div className='md:hidden'><InfoCard /></div>
+      </Carousel>;
     </main>
   );
 
