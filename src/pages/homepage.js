@@ -6,7 +6,14 @@ import hotel from '../assets/hotel.png'
 import Navbar from '@/components/Navbar'
 import beach from '../assets/beach.jpg'
 import Image from 'next/image'
+import InfoCard from '@/components/info_card'
 const Homepage = () => {
+
+  const cards = [];
+
+  for (let i = 0; i < 4; i++) {
+    cards.push(<InfoCard i={i} />);
+  }
 
   return (
     <main >
@@ -27,6 +34,11 @@ const Homepage = () => {
         <HomeCard className={`m-5 ${styles.card}`} heading={"Explore Things-to-do"} text={"Build the trip-of-a-lifetime with us"} pic={scuba} />
         <HomeCard className={`m-5 ${styles.card}`} heading={"Ferry Bookings"} text={"Build the trip-of-a-lifetime with us"} pic={boat} />
       </div>
+     <h1 className='text-center py-4 mt-9 text-xl'>Things To Know Before You Go</h1>
+     <div className='grid grid-cols-1 md:grid-cols-2 place-items-center lg:w-[70vw] lg:mx-[15vw] '>
+        {cards}
+     </div>
+
     </main>
   );
 
